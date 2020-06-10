@@ -1,0 +1,49 @@
+{
+  "name": "abstract-app",
+  "version": "1.0.0",
+  "description": "Abstract Class to represent entities that can be started and stopped",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjmehta/abstract-app.git"
+  },
+  "keywords": [
+    "abstract",
+    "app",
+    "application",
+    "start",
+    "stop",
+    "startable",
+    "stoppable",
+    "base",
+    "class"
+  ],
+  "author": "Tejesh Mehta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tjmehta/abstract-app/issues"
+  },
+  "homepage": "https://github.com/tjmehta/abstract-app#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-typescript": "^7.10.1",
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.11",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^26.0.1",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "abstract-startable": "^1.0.1",
+    "baseerr": "^1.0.0",
+    "timeout-then": "github:tjmehta/timeout-then#7b50b625cb59cf9cd9e7364691af290f8c9ff5e5"
+  }
+}
