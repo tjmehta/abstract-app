@@ -84,7 +84,7 @@ Start the app
 > node app.js
 starting app...
 app started
-app started with pid: 98850
+app pid: 98850
 ```
 
 Send the app SIGINT
