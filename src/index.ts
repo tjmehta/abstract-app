@@ -1,4 +1,4 @@
-import AbstractStartable, { StopOptsType } from 'abstract-startable'
+import AbstractStartable, { StartableStopOptsType } from 'abstract-startable'
 
 import BaseError from 'baseerr'
 import timeout from 'timeout-then'
@@ -12,6 +12,8 @@ export type OptsType = {
     error: (...args: Array<any>) => void
   }
 }
+
+export type StopOptsType = StartableStopOptsType
 
 export default abstract class AbstractApp extends AbstractStartable {
   private logger: OptsType['logger']
