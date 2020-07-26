@@ -1,4 +1,4 @@
-import AbstractStartable, { StartableStopOptsType } from 'abstract-startable'
+import AbstractStartable, { StopOptsType as StartableStopOptsType } from 'abstract-startable'
 
 import BaseError from 'baseerr'
 import timeout from 'timeout-then'
