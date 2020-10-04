@@ -14,9 +14,9 @@ npm i --save abstract-app
 
 ```js
 // esm
-import AbstractStartable from 'abstract-startable`
+import AbstractApp from 'abstract-app`
 // commonjs
-const AbstractStartable = require('abstract-startable')
+const AbstractApp = require('abstract-app')
 ```
 
 #### Define a AppClass and start the app
