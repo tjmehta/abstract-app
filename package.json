@@ -44,6 +44,6 @@
   "dependencies": {
     "abstract-startable": "^1.0.1",
     "baseerr": "^1.0.0",
-    "timeout-then": "github:tjmehta/timeout-then#7b50b625cb59cf9cd9e7364691af290f8c9ff5e5"
+    "timeout-then": "^2.0.0"
   }
 }
