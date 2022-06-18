@@ -3,23 +3,25 @@ import AbstractStartable, { StopOptsType as StartableStopOptsType } from 'abstra
 import BaseError from 'baseerr'
 import timeout from 'timeout-then'
 
+interface AppLoggerType {
+  error: (...args: Array<any>) => void
+  info: (...args: Array<any>) => void
+}
+
 export class AppStopTimeoutError<DataType> extends BaseError<DataType> {}
 
-export type OptsType = {
+export type OptsType<Logger> = {
   stopTimeout: number
-  logger: {
-    info: (...args: Array<any>) => void
-    error: (...args: Array<any>) => void
-  }
+  logger: Logger
 }
 
 export type StopOptsType = StartableStopOptsType
 
-export default abstract class AbstractApp extends AbstractStartable {
-  private logger: OptsType['logger']
+export default abstract class AbstractApp<Logger extends AppLoggerType> extends AbstractStartable {
+  private logger: Logger
   private stopTimeout: number
 
-  constructor({ logger, stopTimeout }: OptsType) {
+  constructor({ logger, stopTimeout }: OptsType<Logger>) {
     super()
     this.logger = logger
     this.stopTimeout = stopTimeout
