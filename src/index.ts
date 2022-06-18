@@ -17,7 +17,7 @@ export type OptsType<Logger> = {
 
 export type StopOptsType = StartableStopOptsType
 
-export default abstract class AbstractApp<Logger extends AppLoggerType> extends AbstractStartable {
+export default abstract class AbstractApp<Logger extends AppLoggerType = AppLoggerType> extends AbstractStartable {
   private logger: Logger
   private stopTimeout: number
 
