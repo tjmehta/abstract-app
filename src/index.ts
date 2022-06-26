@@ -10,7 +10,7 @@ interface AppLoggerType {
 
 export class AppStopTimeoutError<DataType> extends BaseError<DataType> {}
 
-export type OptsType<Logger> = {
+export type OptsType<Logger extends AppLoggerType = AppLoggerType> = {
   stopTimeout: number
   logger: Logger
 }
